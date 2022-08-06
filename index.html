@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loayout</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #Nav{
+            width: 100vw;
+            height: 100vh;
+            color: white !important;
+            background-image: url("https://cdn.pixabay.com/photo/2021/09/07/11/09/ocean-6603623_960_720.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #main{
+            width: 70%;
+            height: 100%;
+            margin:auto;
+            display: flex;
+            flex-direction: column;
+        }
+        #second-inner{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #second-inner>div>h1{
+            padding: 10px;
+            font-size: 32px;
+        }
+        #second-inner>div{
+            text-align: center;
+        }
+        .btn-inner{
+            background: red;
+            border: 1px solid white;
+            margin-top: 10px;
+            padding: 5px 15px ;
+            border-radius: 50px;
+            color: white;
+        }
+        #first-inner{
+            margin-top: 3%;
+            display: flex;
+            justify-content: space-between;
+            height: 30%;
+        }
+        .menu__icon  .line{
+    background-color:#fff;
+    height: 2px;
+    width: 30px;
+    display: block;
+    margin: 5px;
+}
+#one{
+    background-image: url("https://i.vimeocdn.com/video/1008844994-6476435f2dcb0ec69f4dd8fa355fb3eb11d86420d0b985ebf6b26e7916172ba7-d_640x360.jpg");
+    background-size: cover;
+    grid-area: a;
+   
+}
+#two{
+    background-image: url("https://cdn.pixabay.com/photo/2022/07/26/21/37/wheat-7346741__340.jpg");
+    background-size: cover;
+    grid-area: b;
+   
+}
+#three{
+    background-image: url("https://cdn.pixabay.com/photo/2022/08/01/15/04/sunflowers-7358346__340.jpg");
+    background-size: cover;
+    grid-area: c;
+   
+}
+#four{
+    background-image: url("https://cdn.pixabay.com/photo/2022/05/02/17/21/rapeseed-7170105__340.jpg");
+    background-size: cover;
+    grid-area: d;
+   
+}
+Works{
+    text-align: center;
+}
+#gallery{
+    width: 50vw;
+    height: 100vh;
+    display: grid;
+    padding-bottom: 2%;
+    margin: auto;
+    height: 300px;
+    grid-template-areas:
+     "a a a a d d d d"
+     "a a a a d d d d"
+     "a a a a d d d d"
+     "a a a a d d d d"
+     "b b c c d d d d"
+     "b b c c d d d d"
+     "b b c c d d d d"
+     "b b c c d d d d";
+     gap: 10px;
+}
+Apartment{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+#apart-main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+}
+.Tags {
+    text-align: center;
+    width: 60%;
+    margin: auto;
+}
+.TagB{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.TagB > button {
+    padding: 6px 10px;
+    margin: 5px;
+    border: none;
+    outline: none;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+#posts-section
+{
+    width: 70%;
+    margin: auto;
+    padding: 40px 0px;
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 70% 30%;
+}
+#posts-section .left > div:nth-child(1)
+{
+    font-size: 24px;
+    font-weight: bold;
+}
+#posts-section .left .posts
+{
+    padding: 30px 0px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    row-gap: 20px;
+    column-gap:35px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+#posts-section .left .posts > div
+{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 20px;
+}
+#posts-section .left .posts > div > div span
+{
+    font-weight: 100;
+}
+#posts-section .left .posts img
+{
+    height: 100%;
+    width: 100%;
+}
+#posts-section .right div:nth-child(1)
+{
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px 0px;
+}
+#posts-section .right div:nth-child(2)
+{
+    padding: 20px 0px;
+    font-size: 14px;
+}
+#posts-section .right .social-media img
+{
+    height: 15px;
+    width: 15px;
+}
+@media screen and (max-width:750px) and (min-width: 481px){
+    #main{
+        width: 95%;
+    }
+    #gallery{
+    width: 50vw;
+    grid-template-areas:
+     "a a a a"
+     "a a a a"
+     "b b c c"
+     "b b c c"
+     "d d d d"
+     "d d d d"
+     "d d d d"
+     "d d d d";
+     gap: 5px;
+}
+#apart-main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    gap: 10px;
+}
+.Tags{
+        width: 100%;
+        text-align: center;
+    }
+    .TagB{
+        width: 100%;
+        justify-content: center;
+    }
+    #posts-section
+    {
+        width: 80%;
+    }
+}
+@media screen and ( max-width:480px){
+    #main{
+            width: 95%;
+    }
+    #btn-main{
+        display: flex;
+        flex-direction: column;
+    }
+    #gallery{
+    width: 50vw;
+    grid-template-areas:
+     "a a"
+     "a a"
+     "b b"
+     "b b"
+     "c c"
+     "c c"
+     "d d"
+     "d d";
+     gap: 5px;
+}
+#apart-main{
+    grid-template-columns: repeat(1,100%);
+}
+.Tags{
+        width: 100%;
+        text-align: center;
+    }
+    .TagB{
+        width: 100%;
+        justify-content: center;
+    }
+    #posts-section
+    {
+        padding: 0px 10px;
+        grid-template-columns: repeat(1, auto);
+    }
+    #posts-section .left .posts
+    {
+        grid-template-columns: repeat(1, auto);
+    }
+    #posts-section
+    {
+        width: 100%;
+    }
+}
+    </style>
+</head>
+<body>
+   <Nav id="Nav">
+    <div id="main">
+        <div id="first-inner">
+            <div><h1><i>Villa</i></h1></div>
+            <div> <div class="menu__icon">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div></div>
+        </div>
+        <div id="second-inner">
+            <div>
+                <h1 >Welcome to the <i>Villa</i> resort</h1>
+                <p>discover world-class hotel and restorent resort</p>
+                <div id="btn-main">
+                    <button class="btn-inner">Explore the beauty</button>
+                    <button class="btn-inner" style="background-color: transparent;">Download</button>
+                </div>
+            </div>
+        </div>
+    </div>
+   </Nav>
+   <Works>
+        <p>Our GALLERY</p>
+        <h1>Discover our Works</h1>
+        <div id="gallery">
+            <div id="one"></div>
+            <div id="two"></div>
+            <div id="three"></div>
+            <div id="four"></div>
+        </div>
+   </Works>
+
+   <Apartment>
+    <h2 style="padding: 1% 3% 3% 3%; background: rgb(217, 211, 211);">Apartment Room</h2>
+    <div id="apart-main">
+        <div id="apart-one">
+            <img  style="width: 100%;" src="https://cdn.pixabay.com/photo/2020/10/18/09/16/bedroom-5664221__340.jpg" alt="">
+        </div>
+        <div id="apart-two">
+            <div style="margin-top: 10%; background: #fff;">           
+                <h1>family Room</h1>
+               <p><b>max</b>: 3 person</p>
+               <p><b>size</b>: 34 m2</p>
+               <p><b>bed</b> : 3</p>
+               <p><b>view</b> : sea view</p>
+               <button class="room-btn">View Room Details</button></div>
+        </div>
+        <div id="apart-three">
+            <img style="width: 100%;" src="https://cdn.pixabay.com/photo/2018/06/14/21/15/bedroom-3475656__340.jpg" alt="">
+        </div>
+        <div id="apart-four">
+            <div style="margin-top: 10%; background: #fff;">           
+                <h1>family Room</h1>
+               <p><b>max</b>: 3 person</p>
+               <p><b>size</b>: 34 m2</p>
+               <p><b>bed</b> : 3</p>
+               <p><b>view</b> : sea view</p>
+               <button class="room-btn">View Room Details</button></div>
+        </div>
+
+
+        <div id="apart-six">
+            <div style="margin-top: 10%; background: #fff;">           
+                <h1>family Room</h1>
+               <p><b>max</b>: 3 person</p>
+               <p><b>size</b>: 34 m2</p>
+               <p><b>bed</b> : 3</p>
+               <p><b>view</b> : sea view</p>
+               <button class="room-btn">View Room Details</button></div>
+        </div>
+        <div id="apart-five">
+            <img style="width: 100%;"  src="https://cdn.pixabay.com/photo/2014/10/16/08/39/bedroom-490779__340.jpg" alt="">
+        </div>
+
+        <div id="apart-eight">
+      <div>           
+         <h1>family Room</h1>
+        <p><b>max</b>: 3 person</p>
+        <p><b>size</b>: 34 m2</p>
+        <p><b>bed</b> : 3</p>
+        <p><b>view</b> : sea view</p>
+        <button class="room-btn">View Room Details</button></div>
+        </div>
+        <div id="apart-seven">
+            <img style="width: 100%;"  src="https://cdn.pixabay.com/photo/2017/01/14/12/48/hotel-1979406__340.jpg" alt="">
+        </div>
+    </div>
+
+</Apartment>
+<div id="posts-section">
+    <div class="left">
+        <div>
+            Popular Posts
+        </div>
+        <div class="posts">
+            <div>
+                <div><img src="https://www.thespruce.com/thmb/0mCrVrlgAOLHm03zxtJxMd8RIwQ=/2048x1365/filters:fill(auto,1)/put-together-a-perfect-guest-room-1976987-hero-223e3e8f697e4b13b62ad4fe898d492d.jpg" /></div>
+                <div>Visiting Theme Park Improves Your Health<br /><span>By <b>John Doe</b> on Dec 19, 2017</span></div>
+            </div>
+            <div>
+                <div><img src="https://www.thespruce.com/thmb/0mCrVrlgAOLHm03zxtJxMd8RIwQ=/2048x1365/filters:fill(auto,1)/put-together-a-perfect-guest-room-1976987-hero-223e3e8f697e4b13b62ad4fe898d492d.jpg" /></div>
+                <div>Visiting Theme Park Improves Your Health<br /><span>By <b>John Doe</b> on Dec 19, 2017</span></div>
+            </div>
+            <div>
+                <div><img src="https://www.thespruce.com/thmb/0mCrVrlgAOLHm03zxtJxMd8RIwQ=/2048x1365/filters:fill(auto,1)/put-together-a-perfect-guest-room-1976987-hero-223e3e8f697e4b13b62ad4fe898d492d.jpg" /></div>
+                <div>Visiting Theme Park Improves Your Health<br /><span>By <b>John Doe</b> on Dec 19, 2017</span></div>
+            </div>
+            <div>
+                <div><img src="https://www.thespruce.com/thmb/0mCrVrlgAOLHm03zxtJxMd8RIwQ=/2048x1365/filters:fill(auto,1)/put-together-a-perfect-guest-room-1976987-hero-223e3e8f697e4b13b62ad4fe898d492d.jpg" /></div>
+                <div>Visiting Theme Park Improves Your Health<br /><span>By <b>John Doe</b> on Dec 19, 2017</span></div>
+            </div>
+            <div>
+                <div><img src="https://www.thespruce.com/thmb/0mCrVrlgAOLHm03zxtJxMd8RIwQ=/2048x1365/filters:fill(auto,1)/put-together-a-perfect-guest-room-1976987-hero-223e3e8f697e4b13b62ad4fe898d492d.jpg" /></div>
+                <div>Visiting Theme Park Improves Your Health<br /><span>By <b>John Doe</b> on Dec 19, 2017</span></div>
+            </div>
+            <div>
+                <div><img src="https://www.thespruce.com/thmb/0mCrVrlgAOLHm03zxtJxMd8RIwQ=/2048x1365/filters:fill(auto,1)/put-together-a-perfect-guest-room-1976987-hero-223e3e8f697e4b13b62ad4fe898d492d.jpg" /></div>
+                <div>Visiting Theme Park Improves Your Health<br /><span>By <b>John Doe</b> on Dec 19, 2017</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div>
+            About Philosophy
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime expedita ipsa minima rem consequuntur eaque, debitis quo repudiandae nostrum, placeat itaque dicta facere perferendis at minus natus laudantium! Quam, necessitatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime expedita ipsa minima rem consequuntur eaque, debitis quo repudiandae nostrum.
+        </div>
+        <div class="social-media">
+            <img src="https://cdn-icons-png.flaticon.com/512/59/59439.png" /> &nbsp;
+            <img src="https://cdn-icons-png.flaticon.com/512/39/39552.png" /> &nbsp;
+            <img src="https://www.freeiconspng.com/thumbs/instagram-icon/instagram-icon-black-and-white-29.png" /> &nbsp;
+            <img src="https://cdn-icons-png.flaticon.com/512/37/37929.png" />
+        </div>
+    </div>
+</div>
+<div class="Tags">
+    <h1>Tags</h1>
+    <div class="TagB">
+    <button>RANDOM</button>
+    <button>RANDOM</button>
+    <button>RANDOM</button>
+    <button>RANDOM</button>
+    <button>RANDOM</button>
+    <button>RANDOM</button>
+    <button>RANDOM</button>
+    <button>RANDOM</button>
+    <button>RANDOM</button>
+    <button>RANDOM</button>
+    <button>RANDOM</button>
+    </div>
+</body>
+</html>
